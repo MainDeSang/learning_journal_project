@@ -27,5 +27,8 @@ public class Topic {
     //Definiert die Beziehung als bidirektional.
     @ManyToMany(mappedBy = "topics") //Das Feld "topics" in der User-Klasse wird als "users" in der Topic-Klasse gemappt. & mappedBy=Bedeutet, dass die User-Entität die Beziehung steuert (führt).
     private Set<User> users;//Enthält die User, die dieses Topic gewählt haben.
-
+    //Warum kein @JoinTable in Topic?
+    //
+    //Weil die Steuerung der Beziehung bereits in User passiert.
+    //mappedBy = "topics" sagt Spring Boot: Diese Seite besitzt die Beziehung nicht direkt.
 }
