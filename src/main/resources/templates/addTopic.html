@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a new Topic to User</title>
+</head>
+<body>
+<h2>Neues Topic hinzufügen</h2>
+<form th:action="@{/topics/addTopic}" method="post">
+    <label>
+        <input type="text" name="title" placeholder="Title" required>
+    </label>
+    <label>
+        <input type="text" name="description" placeholder="Description" required>
+    </label>
+    <label>
+        <input type="text" name="duration" placeholder="Duration" required>
+    </label>
+    <button type="submit">Hinzufügen</button>
+</form>
+</body>
+</html>

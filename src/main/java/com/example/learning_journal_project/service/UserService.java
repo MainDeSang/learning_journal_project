@@ -11,18 +11,23 @@ import java.util.List;
 @Builder
 public class UserService {
 
+
     private final UserRepository userRepository;
+
+    public void createUser(User user) {
+        userRepository.save(user);
+    }
 
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    public User createUser(User user) {
-        return userRepository.save(user);
-    }
-
     public void deleteUser(Long userId) {
         userRepository.deleteById(userId);
+    }
+
+    public User getUserById(Long userId) {
+        return userRepository.findById(userId).orElse(null);
     }
 }
 

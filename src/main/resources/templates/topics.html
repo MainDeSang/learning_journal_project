@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aktuelle Topics></title>
+</head>
+<body>
+<h1>Topic List</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Duration</th>
+  </tr>
+
+  <tr th:each="topic : ${topics}">
+    <td th:text="${topic.id}"></td>
+    <td th:text="${topic.title}"></td>
+    <td th:text="${topic.description}"></td>
+    <td th:text="${topic.duration}"></td>
+    <td>
+      <form th:action="@{'/topics/delete/' + ${topic.id}}" method="post">
+        <button>Löschen</button>
+      </form>
+    </td>
+  </tr>
+</table>
+
+
+<a th:href="@{/topics/add}">Neues Topic hinzufügen</a>
+<a th:href="@{/}">Zur Startseite</a>
+
+</body>
+</html>
