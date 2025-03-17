@@ -2,7 +2,10 @@ package com.example.learning_journal_project.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,7 +18,7 @@ import java.util.Set;
 @ToString //→ Generiert eine toString()-Methode
 @Builder //→ Generiert einem Builder-Klassenmitglied für diese Klasse
 
-public class User {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,5 +47,32 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "topic_id") // Verknüpfung zur Topic-Tabelle & erstellt eine FK-Spalte (topic_id) in der Zwischentabelle.
     )
     private Set<Topic> topics = new HashSet<>(); // Verwenden einer Set-Menge zur Vermeidung doppelter Einträge
+
+
+    // Ab hier der Versuch ein Login zu erstellen....:
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<JournalEntry> journalEntries;
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null; // Keine Rollen für den Anfang
+    }
+
+    @Override
+    public String getUsername() {
+        return email; // Anmeldung mit der E-Mail
+    }
+
+    @Override
+    public boolean isAccountNonExpired() { return true; }
+
+    @Override
+    public boolean isAccountNonLocked() { return true; }
+
+    @Override
+    public boolean isCredentialsNonExpired() { return true; }
+
+    @Override
+    public boolean isEnabled() { return true; }
 
 }
