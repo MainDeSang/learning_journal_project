@@ -6,16 +6,22 @@
 </head>
 <body>
 <h2>Neuen User hinzufügen</h2>
-<form th:action="@{/users/addUser}" method="post">
+<form action="/users/addUser" method="post">
   <label>
-    <input type="text" name="fullName" placeholder="Name" required>
+    <input type="text" name="fullName" placeholder="Name eingeben" required>
   </label>
   <label>
-    <input type="email" name="email" placeholder="Email" required>
+    <input type="email" name="email" placeholder="Email eingeben" required>
   </label>
   <label>
-    <input type="password" name="password" placeholder="Passwort" required>
+    <input type="password" name="password" placeholder="Passwort wählen" required>
   </label>
+  <label>
+    <h3>Wähle dein(e) Topic(s):</h3>
+    <div th:each="topic : ${topics}">
+      <input type="checkbox" th:value="${topic.id}" name="topicIds">
+      <label th:text="${topic.title}"></label><br>
+    </div></label>
   <button type="submit">Hinzufügen</button>
 </form>
 </body>

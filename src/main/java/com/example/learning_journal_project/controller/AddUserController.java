@@ -1,10 +1,15 @@
 package com.example.learning_journal_project.controller;
 
-import com.example.learning_journal_project.model.Role;
+import com.example.learning_journal_project.model.Topic;
 import com.example.learning_journal_project.model.User;
-import com.example.learning_journal_project.service.UserService;
+import com.example.learning_journal_project.repository.TopicRepository;
+import com.example.learning_journal_project.repository.UserRepository;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Controller
@@ -12,21 +17,29 @@ import org.springframework.web.bind.annotation.*;
 
 public class AddUserController {
 
-    private final UserService userService;
+    private final TopicRepository topicRepository;
+    private final UserRepository userRepository;
 
 
-    public AddUserController(UserService userService) {
-        this.userService = userService;
+    public AddUserController(TopicRepository topicRepository, UserRepository userRepository) {
+        this.topicRepository = topicRepository;
+        this.userRepository = userRepository;
     }
 
-    @GetMapping()
-    public String addUserPage() {
-        return "addUser";
+    @GetMapping("") // GET-Methode für die Seite "addUser"
+    public String addUserPage(Model model) {
+        model.addAttribute("users", userRepository.findAll());
+        model.addAttribute("user", new User()); // Neues User-Objekt für das Formular
+        model.addAttribute("topics", topicRepository.findAll()); // Alle Topics für das Formular
+        return "addUser"; // Thymeleaf-Template "addUser.html"
     }
 
-    @PostMapping("")
-    public String addUser(@RequestParam(name = "fullName") String fullName, @RequestParam(name = "email") String email, @RequestParam(name = "password") String password) {
-        userService.createUser(new User(null, fullName, email, password, Role.USER));
-        return "redirect:/users";
+
+    @PostMapping("") // POST-Methode bleibt unter "/users/addUser"
+    public String addUser(@ModelAttribute User user, @RequestParam(required = false) Set<Long> topicIds) {
+        Set<Topic> selectedTopics = topicIds != null ? new HashSet<>(topicRepository.findAllById(topicIds)) : new HashSet<>();
+        user.setTopics(selectedTopics);
+        userRepository.save(user); // Benutzer in die Datenbank speichern
+        return "redirect:/users"; // Weiterleitung zur Benutzerübersicht
     }
 }

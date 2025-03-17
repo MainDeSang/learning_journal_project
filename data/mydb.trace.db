@@ -1,0 +1,4 @@
+2025-03-14 19:12:54.222230+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "SELECT * FROM TOPICS USERS [*]USERS"
+Syntax error in SQL statement "SELECT * FROM TOPICS USERS [*]USERS"; SQL statement:
+SELECT * FROM TOPICS USERS USERS [42000-232]
