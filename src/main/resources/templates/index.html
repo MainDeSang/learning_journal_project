@@ -4,29 +4,13 @@
     <title>User List</title>
 </head>
 <body>
-<h1>User List</h1>
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Aktionen</th>
-    </tr>
-    <tr th:each="user : ${users}">
-        <td th:text="${user.id}"></td>
-        <td th:text="${user.fullName}"></td>
-        <td th:text="${user.email}"></td>
-        <td>
-            <form th:action="@{'/users/delete/' + ${user.id}}" method="post">
-                <button>Löschen</button>
-            </form>
-        </td>
-    </tr>
-</table>
+<h1>Learning journal</h1>
+
 
 
 <a th:href="@{/users/addUser}">Neuen User hinzufügen</a>
 <a th:href="@{/topics}">Zur Topic ansicht</a>
+<a th:href="@{/overview}">Zur Nutzerübersicht</a>
 
 </body>
 </html>

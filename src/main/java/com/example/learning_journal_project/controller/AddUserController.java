@@ -1,5 +1,6 @@
 package com.example.learning_journal_project.controller;
 
+import com.example.learning_journal_project.model.Role;
 import com.example.learning_journal_project.model.Topic;
 import com.example.learning_journal_project.model.User;
 import com.example.learning_journal_project.repository.TopicRepository;
@@ -39,6 +40,7 @@ public class AddUserController {
     public String addUser(@ModelAttribute User user, @RequestParam(required = false) Set<Long> topicIds) {
         Set<Topic> selectedTopics = topicIds != null ? new HashSet<>(topicRepository.findAllById(topicIds)) : new HashSet<>();
         user.setTopics(selectedTopics);
+        user.setRole(Role.USER); // Standardrolle für neue Benutzer: USER
         userRepository.save(user); // Benutzer in die Datenbank speichern
         return "redirect:/users"; // Weiterleitung zur Benutzerübersicht
     }

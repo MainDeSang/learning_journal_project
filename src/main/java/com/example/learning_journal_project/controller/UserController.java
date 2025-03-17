@@ -1,6 +1,5 @@
 package com.example.learning_journal_project.controller;
 
-import com.example.learning_journal_project.model.User;
 import com.example.learning_journal_project.repository.TopicRepository;
 import com.example.learning_journal_project.service.UserService;
 import org.springframework.stereotype.Controller;
@@ -9,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Controller
-@RequestMapping("/users") //→ Mappt den Pfad /api/users auf die UserController-Klasse
+@RequestMapping("/users") //→ Mappt den Pfad /users auf die UserController-Klasse
 
 public class UserController {
 
@@ -25,8 +24,7 @@ public class UserController {
 
     @GetMapping("")
     public String getUser(Model model) {
-        model.addAttribute("user", new User());
-        model.addAttribute("topics", topicRepository.findAll()); //Alle Topics in die View senden
+        model.addAttribute("users", userService.getAllUsers());
         return "index";
     }
 

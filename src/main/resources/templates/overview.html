@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overview</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Aktionen</th>
+  </tr>
+  <tr th:each="user : ${users}">
+    <td th:text="${user.id}"></td>
+    <td th:text="${user.fullName}"></td>
+    <td th:text="${user.email}"></td>
+    <td>
+      <form th:action="@{'/users/delete/' + ${user.id}}" method="post">
+        <button>Löschen</button>
+      </form>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
