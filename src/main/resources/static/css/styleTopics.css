@@ -1,0 +1,114 @@
+/* Allgemeine Stile */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container für die Tabelle */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabellen-Header */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Tabellen-Kopf */
+thead {
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+}
+
+/* Tabellen-Zellen */
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Abwechselnde Zeilenfarben für bessere Lesbarkeit */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover-Effekt */
+tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.2s;
+}
+
+/* Buttons */
+.btn {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+/* Bearbeiten-Button */
+.btn.edit {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Löschen-Button */
+.btn.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Button Hover */
+.btn:hover {
+    opacity: 0.8;
+}
+/* Formular zum Hinzufügen */
+.add-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn.add {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.add:hover {
+    opacity: 0.8;
+}

@@ -42,6 +42,6 @@ public class AddUserController {
         user.setTopics(selectedTopics);
         user.setRole(Role.USER); // Standardrolle für neue Benutzer: USER
         userRepository.save(user); // Benutzer in die Datenbank speichern
-        return "redirect:/users"; // Weiterleitung zur Benutzerübersicht
+        return "redirect:/overview"; // Weiterleitung zur Benutzerübersicht
     }
 }

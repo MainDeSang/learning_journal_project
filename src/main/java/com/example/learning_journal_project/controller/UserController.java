@@ -13,12 +13,10 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     private final UserService userService;
-    private final TopicRepository topicRepository;
 
 
     public UserController(UserService userService, TopicRepository topicRepository) {
         this.userService = userService;
-        this.topicRepository = topicRepository;
     }
 
 
@@ -32,7 +30,7 @@ public class UserController {
     @PostMapping("/delete/{userId}")
     public String deleteUser(@PathVariable Long userId) {
         userService.deleteUser(userId);
-        return "redirect:/users";
+        return "redirect:/overview";
     }
 
 }

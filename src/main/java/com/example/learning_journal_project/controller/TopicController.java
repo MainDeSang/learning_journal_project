@@ -2,18 +2,14 @@ package com.example.learning_journal_project.controller;
 
 import com.example.learning_journal_project.model.Topic;
 import com.example.learning_journal_project.model.User;
-import com.example.learning_journal_project.repository.TopicRepository;
 import com.example.learning_journal_project.service.TopicService;
 import com.example.learning_journal_project.service.UserService;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -24,16 +20,9 @@ import java.util.Set;
 @AllArgsConstructor
 
 public class TopicController {
-    @Autowired // → Nur wenn der TopicRepository-Bean angefordert wird, wird er angelegt.
     public final TopicService topicService;
-    @Autowired // → Nur wenn der UserService-Bean angefordert wird, wird er angelegt.
     public final UserService userService;
-//    private final TopicRepository topicRepository;
 
-//    public TopicController(TopicService topicService, UserService userService, TopicRepository topicRepository) {
-//        this.topicService = topicService;
-//        this.userService = userService;
-//    }
 
     @GetMapping("")
     public String getTopics(Model model) {

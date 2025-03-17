@@ -1,35 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Aktuelle Topics></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topic Übersicht</title>
+  <link rel="stylesheet" href="/css/styleTopics.css">
 </head>
 <body>
-<h1>Topic List</h1>
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Duration</th>
-  </tr>
 
-  <tr th:each="topic : ${topics}">
-    <td th:text="${topic.id}"></td>
-    <td th:text="${topic.title}"></td>
-    <td th:text="${topic.description}"></td>
-    <td th:text="${topic.duration}"></td>
-    <td>
-      <form th:action="@{'/topics/delete/' + ${topic.id}}" method="post">
-        <button>Löschen</button>
-      </form>
-    </td>
-  </tr>
-</table>
+<div class="container">
+  <h2>Topic Übersicht</h2>
 
+  <!-- Neues Topic hinzufügen -->
+  <form th:action="@{/topics/addTopic}" method="post" class="add-form">
+    <label>
+      <input type="text" name="title" placeholder="Titel eingeben" required>
+    </label>
+    <label>
+      <input type="text" name="description" placeholder="Beschreibung eingeben" required>
+    </label>
+    <label>
+      <input type="number" name="duration" placeholder="Dauer (Minuten)" required>
+    </label>
+    <button type="submit" class="btn add">Hinzufügen</button>
+  </form>
 
-<a th:href="@{/topics/addTopic}">Neues Topic hinzufügen</a>
-<a th:href="@{/}">Zur Startseite</a>
+  <!-- Topic-Tabelle -->
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Beschreibung</th>
+      <th>Dauer (Minuten)</th>
+      <th>Aktionen</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="topic : ${topics}">
+      <td th:text="${topic.id}"></td>
+      <td th:text="${topic.title}"></td>
+      <td th:text="${topic.description}"></td>
+      <td th:text="${topic.duration}"></td>
+      <td>
+        <a th:href="@{/topics/edit/{id}(id=${topic.id})}" class="btn edit">Bearbeiten</a>
+        <form th:action="@{/topics/delete/{id}(id=${topic.id})}" method="post" style="display:inline;">
+          <button type="submit" class="btn delete">Löschen</button>
+          <a th:href="@{/}" class="btn main">Zurück</a>
+        </form>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 
 </body>
 </html>

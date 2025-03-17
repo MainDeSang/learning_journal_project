@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>User List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Journal</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<h1>Learning journal</h1>
 
+<div class="container">
+    <h1>Learning Journal</h1>
 
-
-<a th:href="@{/users/addUser}">Neuen User hinzufügen</a>
-<a th:href="@{/topics}">Topic ansicht</a>
-<a th:href="@{/overview}">Nutzerübersicht</a>
+    <div class="nav-links">
+        <a th:href="@{/users/addUser}" class="btn">Neuen User hinzufügen</a>
+        <a th:href="@{/topics}" class="btn">Topic Ansicht</a>
+        <a th:href="@{/overview}" class="btn">Nutzerübersicht</a>
+    </div>
+</div>
 
 </body>
 </html>
+
