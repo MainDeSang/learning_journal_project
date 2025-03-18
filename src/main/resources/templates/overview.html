@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Übersicht</title>
+  <title>User Overview</title>
   <link rel="stylesheet" href="/css/styleOverview.css">
 </head>
 <body>
 
 <div class="container">
-  <h2>User Übersicht</h2>
+  <h2>User Overview</h2>
   <table>
     <thead>
     <tr>
@@ -17,7 +17,7 @@
       <th>Name</th>
       <th>Email</th>
       <th>Topics</th>
-      <th>Aktionen</th>
+      <th>Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -29,11 +29,11 @@
         <span th:each="topic : ${user.topics}" th:text="${topic.title} + ' '" class="topic-badge"></span>
       </td>
       <td>
-        <a th:href="@{/users/edit/{id}(id=${user.id})}" class="btn edit">Bearbeiten</a>
+        <a th:href="@{/users/edit/{id}(id=${user.id})}" class="btn edit">Edit</a>
         <form th:action="@{/users/delete/{id}(id=${user.id})}" method="post" style="display:inline;">
-          <button type="submit" class="btn delete">Löschen</button>
+          <button type="submit" class="btn delete">Delete</button>
         </form>
-        <button type="submit" class="btn main"><a th:href="@{/}" class="btn main">Zurück</a></button>
+        <button type="submit" class="btn main"><a th:href="@{/}" class="btn main">Back</a></button>
       </td>
     </tr>
     </tbody>

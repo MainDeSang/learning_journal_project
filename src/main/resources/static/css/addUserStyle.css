@@ -60,7 +60,7 @@ input[type="text"], input[type="email"], input[type="password"] {
     gap: 10px;
 }
 
-/* Button */
+ /*Button */
 .btn {
     background-color: #007bff;
     color: white;
@@ -77,3 +77,5 @@ input[type="text"], input[type="email"], input[type="password"] {
 .btn:hover {
     background-color: #0056b3;
 }
+
+

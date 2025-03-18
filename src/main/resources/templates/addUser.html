@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neuen User hinzufügen</title>
+  <title>Create new User</title>
   <link rel="stylesheet" href="/css/addUserStyle.css">
 </head>
 <body>
 
 <div class="container">
-  <h2>Neuen User hinzufügen</h2>
+  <h2>Create new User</h2>
 
   <form action="/users/addUser" method="post" class="user-form">
-    <label for="fullName">Benutzername:</label>
-    <input type="text" id="fullName" name="fullName" placeholder="Bitte Benutzernamen eingeben" required>
+    <label for="fullName">Username:</label>
+    <input type="text" id="fullName" name="fullName" placeholder="Choose Username" required>
 
     <label for="email">E-Mail:</label>
-    <input type="email" id="email" name="email" placeholder="Bitte Email eingeben" required>
+    <input type="email" id="email" name="email" placeholder="Please enter eMail" required>
 
-    <label for="password">Passwort:</label>
-    <input type="password" id="password" name="password" placeholder="Sicheres Passwort eingeben" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Choose strong Password" required>
 
-    <h3>Wähle dein(e) Topic(s):</h3>
+    <h3>Choose your Topic(s):</h3>
     <div class="topics">
       <div th:each="topic : ${topics}" class="topic-item">
         <label>
@@ -31,8 +31,8 @@
       </div>
     </div>
 
-    <button type="submit" class="btn">Hinzufügen</button>
-    <button type="submit" class="btn main"><a th:href="@{/}" class="btn main">Zurück</a></button>
+    <button type="submit" class="btn">Add</button>
+    <button type="submit" class="btn main"><a th:href="@{/}" class="btn main">Back</a></button>
   </form>
 </div>
 

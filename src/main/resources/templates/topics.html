@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Topic Übersicht</title>
+  <title>Topic overview</title>
   <link rel="stylesheet" href="/css/styleTopics.css">
 </head>
 <body>
 
 <div class="container">
-  <h2>Topic Übersicht</h2>
+  <h2>Topic Overview</h2>
 
   <!-- Neues Topic hinzufügen -->
   <form th:action="@{/topics/addTopic}" method="post" class="add-form">
     <label>
-      <input type="text" name="title" placeholder="Titel eingeben" required>
+      <input type="text" name="title" placeholder="Choose Title" required>
     </label>
     <label>
-      <input type="text" name="description" placeholder="Beschreibung eingeben" required>
+      <input type="text" name="description" placeholder="Make a Description" required>
     </label>
     <label>
-      <input type="number" name="duration" placeholder="Dauer (Minuten)" required>
+      <input type="number" name="duration" placeholder="Duration (Minutes)" required>
     </label>
-    <button type="submit" class="btn add">Hinzufügen</button>
+    <button type="submit" class="btn add">Add</button>
   </form>
 
   <!-- Topic-Tabelle -->
@@ -31,9 +31,9 @@
     <tr>
       <th>ID</th>
       <th>Title</th>
-      <th>Beschreibung</th>
-      <th>Dauer (Minuten)</th>
-      <th>Aktionen</th>
+      <th>Description</th>
+      <th>Duration (Minutes)</th>
+      <th>Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -43,10 +43,10 @@
       <td th:text="${topic.description}"></td>
       <td th:text="${topic.duration}"></td>
       <td>
-        <a th:href="@{/topics/edit/{id}(id=${topic.id})}" class="btn edit">Bearbeiten</a>
+        <a th:href="@{/topics/edit/{id}(id=${topic.id})}" class="btn edit">Edit</a>
         <form th:action="@{/topics/delete/{id}(id=${topic.id})}" method="post" style="display:inline;">
-          <button type="submit" class="btn delete">Löschen</button>
-          <button type="submit" class="btn main"><a th:href="@{/}" class="btn main">Zurück</a></button>
+          <button type="submit" class="btn delete">Delete</button>
+          <button type="submit" class="btn main"><a th:href="@{/}" class="btn main">Back</a></button>
         </form>
       </td>
     </tr>

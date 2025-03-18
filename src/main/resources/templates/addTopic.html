@@ -5,7 +5,7 @@
     <title>Add a new Topic to User</title>
 </head>
 <body>
-<h2>Neues Topic hinzufügen</h2>
+<h2>Add new Topic</h2>
 <form th:action="@{/topics/addTopic}" method="post">
     <label>
         <input type="text" name="title" placeholder="Title" required>
@@ -16,9 +16,9 @@
     <label>
         <input type="text" name="duration" placeholder="Duration" required>
     </label>
-    <button type="submit">Hinzufügen</button>
+    <button type="submit">Add</button>
 </form>
-<button type="submit" class="btn main"><a th:href="@{/}" class="btn main">Zurück</a></button>
+<button type="submit" class="btn main"><a th:href="@{/}" class="btn main">Back</a></button>
 
 </body>
 </html>
