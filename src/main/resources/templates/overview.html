@@ -33,6 +33,7 @@
         <form th:action="@{/users/delete/{id}(id=${user.id})}" method="post" style="display:inline;">
           <button type="submit" class="btn delete">Löschen</button>
         </form>
+        <button type="submit" class="btn main"><a th:href="@{/}" class="btn main">Zurück</a></button>
       </td>
     </tr>
     </tbody>

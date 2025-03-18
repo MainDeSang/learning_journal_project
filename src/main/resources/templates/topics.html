@@ -46,7 +46,7 @@
         <a th:href="@{/topics/edit/{id}(id=${topic.id})}" class="btn edit">Bearbeiten</a>
         <form th:action="@{/topics/delete/{id}(id=${topic.id})}" method="post" style="display:inline;">
           <button type="submit" class="btn delete">Löschen</button>
-          <a th:href="@{/}" class="btn main">Zurück</a>
+          <button type="submit" class="btn main"><a th:href="@{/}" class="btn main">Zurück</a></button>
         </form>
       </td>
     </tr>
