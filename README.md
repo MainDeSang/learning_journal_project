@@ -41,10 +41,10 @@ To view the project locally:
 3. **Open the Home Page**:
    Open index.html in your preferred web browser to explore the Learning Journal.
 
-Contributions
+**Contributions**
 Contributions are welcome! Feel free to fork the repository, make enhancements, and submit a pull request. Whether it's optimizing the code, adding new features, or improving documentation, your input is valuable.
 
-License
+**License**
 This project is open-source and available under the MIT License.
 
 Thank you for visiting, and happy coding!
