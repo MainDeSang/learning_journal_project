@@ -3,6 +3,7 @@ package com.example.learning_journal_project.controller;
 import com.example.learning_journal_project.model.Role;
 import com.example.learning_journal_project.model.Topic;
 import com.example.learning_journal_project.model.User;
+import com.example.learning_journal_project.model.Vintage;
 import com.example.learning_journal_project.repository.TopicRepository;
 import com.example.learning_journal_project.repository.UserRepository;
 import org.springframework.stereotype.Controller;
@@ -32,6 +33,9 @@ public class AddUserController {
         model.addAttribute("users", userRepository.findAll());
         model.addAttribute("user", new User()); // Neues User-Objekt für das Formular
         model.addAttribute("topics", topicRepository.findAll()); // Alle Topics für das Formular
+        model.addAttribute("vintages", userRepository.findAll()); // Jahrgänge für das Formular
+        model.addAttribute("vintage", new Vintage());
+        model.addAttribute("roleOptions", Role.values()); // Alle verfügbaren Rollen für das Formular
         return "addUser"; // Thymeleaf-Template "addUser.html"
     }
 
@@ -41,6 +45,7 @@ public class AddUserController {
         Set<Topic> selectedTopics = topicIds != null ? new HashSet<>(topicRepository.findAllById(topicIds)) : new HashSet<>();
         user.setTopics(selectedTopics);
         user.setRole(Role.USER); // Standardrolle für neue Benutzer: USER
+        user.setVintage(user.getVintage());
         userRepository.save(user); // Benutzer in die Datenbank speichern
         return "redirect:/overview"; // Weiterleitung zur Benutzerübersicht
     }

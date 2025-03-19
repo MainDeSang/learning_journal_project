@@ -33,7 +33,17 @@
                 <label th:for="'topic-' + ${topic.id}" th:text="${topic.title}"></label>
             </div>
         </div>
+        <h3>Select your vintage:</h3>
 
+        <div class="vintages">
+            <div th:each="vintage : ${vintage}" class="vintage-item">
+                <label th:for="'vintage-' + ${vintage.id}" th:text="${vintage.id}"></label>
+                <label th:for="'vintage-' + ${vintage.summer}" th:text="${vintage.summer}"></label>
+                <label>
+                    <input type="radio" th:value="${vintage.id}" name="vintageIds" th:id="'vintage-' + ${vintage.id}">
+                </label>
+            </div>
+        </div>
         <button type="submit" class="btn">Add</button>
         <button type="submit" class="btn main"><a th:href="@{/}" class="btn main">Back</a></button>
     </form>

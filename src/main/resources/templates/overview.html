@@ -28,6 +28,7 @@
       <td th:text="${user.id}"></td>
       <td th:text="${user.fullName}"></td>
       <td th:text="${user.email}"></td>
+      <td th:text="${user.vintage}"></td>
       <td>
         <span th:each="topic : ${user.topics}" th:text="${topic.title} + ' '" class="topic-badge"></span>
       </td>
