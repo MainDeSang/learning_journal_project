@@ -1,4 +1,5 @@
 package com.example.learning_journal_project.model;
+
 import jakarta.persistence.*;
 import lombok.*;
 

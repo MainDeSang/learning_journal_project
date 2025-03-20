@@ -1,4 +1,5 @@
 package com.example.learning_journal_project.model;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,10 +21,15 @@ public class Vintage {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String summer;
+    private String vintage_year; //Speichert den Jahrgang als Text (kann auch int sein).
 
 
-
-    @OneToMany(mappedBy = "vintage", cascade = CascadeType.ALL, orphanRemoval = true) //Eine Klasse hat mehrere User, wobei mappedBy = "klasse" auf das Feld klasse in User verweist
+    @OneToMany(mappedBy = "vintage", cascade = CascadeType.ALL, orphanRemoval = true)
+    //Eine Klasse hat mehrere User, wobei mappedBy = "klasse" auf das Feld klasse in User verweist
     private List<User> users = new ArrayList<>();   // CascadeType & orphanRemoval: Bestimmt, ob abhängige User-Objekte automatisch gespeichert oder gelöscht werden.
+
+    // Konstruktor für die Erstellung von vordefinierten Jahrgängen.
+    public Vintage(String year) {
+        this.vintage_year = year;
+    }
 }

@@ -46,9 +46,9 @@ public class User {
     private Set<Topic> topics = new HashSet<>(); // Verwenden einer Set-Menge zur Vermeidung doppelter Einträge
 
 
-    // @ManyToOne in User: Jeder User gehört genau einer Klasse.
-    @ManyToOne
-    @JoinColumn(name = "vintage_id") // Fremdschlüssel in der User-Tabelle / Setzt die Fremdschlüssel-Spalte in der User-Tabelle.
+    @ManyToOne // @ManyToOne: Ein User gehört zu einem Vintage, aber ein Vintage kann mehrere User haben.
+    @JoinColumn(name = "vintage_id")
+    // @JoinColumn(name = "vintage_id"): Speichert die Vintage-ID in der User-Tabelle als Fremdschlüssel.
     private Vintage vintage;
 
 }

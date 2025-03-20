@@ -421,3 +421,151 @@ Database is already closed (to disable automatic closing at VM shutdown, add ";D
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
 	at com.example.learning_journal_project.LearningJournalProjectApplication.main(LearningJournalProjectApplication.java:10)
+2025-03-20 09:52:04.331971+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "alter table if exists vintages add column [*]year varchar(255)"; erwartet "identifier"
+Syntax error in SQL statement "alter table if exists vintages add column [*]year varchar(255)"; expected "identifier"; SQL statement:
+alter table if exists vintages add column year varchar(255) [42001-232]
+2025-03-20 10:10:28.214686+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "alter table if exists vintages add column [*]year varchar(255)"; erwartet "identifier"
+Syntax error in SQL statement "alter table if exists vintages add column [*]year varchar(255)"; expected "identifier"; SQL statement:
+alter table if exists vintages add column year varchar(255) [42001-232]
+2025-03-20 10:10:35.448661+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:10:36.797426+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:10:55.710809+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "alter table if exists vintages add column [*]year varchar(255)"; erwartet "identifier"
+Syntax error in SQL statement "alter table if exists vintages add column [*]year varchar(255)"; expected "identifier"; SQL statement:
+alter table if exists vintages add column year varchar(255) [42001-232]
+2025-03-20 10:11:00.212471+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:11:01.056611+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:11:02.000414+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:14:36.486037+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "alter table if exists vintages add column [*]year varchar(255)"; erwartet "identifier"
+Syntax error in SQL statement "alter table if exists vintages add column [*]year varchar(255)"; expected "identifier"; SQL statement:
+alter table if exists vintages add column year varchar(255) [42001-232]
+2025-03-20 10:14:42.668649+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:14:43.471865+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:14:44.622179+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:18:04.098533+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "alter table if exists vintages add column [*]year varchar(255)"; erwartet "identifier"
+Syntax error in SQL statement "alter table if exists vintages add column [*]year varchar(255)"; expected "identifier"; SQL statement:
+alter table if exists vintages add column year varchar(255) [42001-232]
+2025-03-20 10:18:08.920220+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:18:09.925088+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:18:10.156378+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:18:10.369579+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:18:10.570163+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:18:10.781022+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:18:11.105512+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:18:11.504290+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:18:12.470554+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:18:15.084008+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:21:06.195319+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "alter table if exists vintages add column [*]year varchar(255)"; erwartet "identifier"
+Syntax error in SQL statement "alter table if exists vintages add column [*]year varchar(255)"; expected "identifier"; SQL statement:
+alter table if exists vintages add column year varchar(255) [42001-232]
+2025-03-20 10:21:17.247906+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:21:24.362609+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:23:32.139421+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "alter table if exists vintages add column [*]year varchar(255)"; erwartet "identifier"
+Syntax error in SQL statement "alter table if exists vintages add column [*]year varchar(255)"; expected "identifier"; SQL statement:
+alter table if exists vintages add column year varchar(255) [42001-232]
+2025-03-20 10:23:35.311429+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:27:07.419625+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "alter table if exists vintages add column [*]year varchar(255)"; erwartet "identifier"
+Syntax error in SQL statement "alter table if exists vintages add column [*]year varchar(255)"; expected "identifier"; SQL statement:
+alter table if exists vintages add column year varchar(255) [42001-232]
+2025-03-20 10:27:12.401276+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:28:38.010206+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "alter table if exists vintages add column [*]year varchar(255)"; erwartet "identifier"
+Syntax error in SQL statement "alter table if exists vintages add column [*]year varchar(255)"; expected "identifier"; SQL statement:
+alter table if exists vintages add column year varchar(255) [42001-232]
+2025-03-20 10:28:42.120521+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
+2025-03-20 10:28:57.724295+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "VINTAGE" nicht gefunden
+Table "VINTAGE" not found; SQL statement:
+SELECT * FROM vintage [42102-232]
+2025-03-20 10:29:16.059054+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "VINTAGE" nicht gefunden
+Table "VINTAGE" not found; SQL statement:
+INSERT INTO vintage (year) VALUES ('2024'), ('2025') [42102-232]
+2025-03-20 10:29:17.227368+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "VINTAGE" nicht gefunden
+Table "VINTAGE" not found; SQL statement:
+INSERT INTO vintage (year) VALUES ('2024'), ('2025') [42102-232]
+2025-03-20 10:30:24.385243+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "alter table if exists vintages add column [*]year varchar(255)"; erwartet "identifier"
+Syntax error in SQL statement "alter table if exists vintages add column [*]year varchar(255)"; expected "identifier"; SQL statement:
+alter table if exists vintages add column year varchar(255) [42001-232]
+2025-03-20 10:30:34.945942+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into vintages ([*]year,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into vintages ([*]year,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into vintages (year,id) values (?,default) [42001-232]
